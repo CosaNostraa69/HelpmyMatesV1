@@ -9,6 +9,7 @@ const postRoutes = require('./routes/postRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const rewardRoutes = require('./routes/rewardRoutes');
 const userFriendRoutes = require('./routes/userFriendRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use('/api', postRoutes);
 app.use('/api', messageRoutes);
 app.use('/api', rewardRoutes);
 app.use('/api', userFriendRoutes);
+app.use('/api', authRoutes);
 
 
 const PORT = process.env.PORT || 3000;
