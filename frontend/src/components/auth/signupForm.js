@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/authForm/signupForm.css'; 
+import authService from '../../services/authService';
 
 function SignupForm() {
     const [formData, setFormData] = useState({
@@ -16,19 +17,18 @@ function SignupForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.password === formData.confirmPassword) {
-            console.log('Mot de passe identique');
-        }
-        else {
-            console.log('Mot de passe différent');
-        }
-        
-        console.log(formData);
+        authService.register(formData.username, formData.email, formData.password)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
     };
 
     return (
         <form className="signup-form" onSubmit={handleSubmit}>
-            <h2>Inscription</h2>
             <input
                 type="text"
                 name="username"

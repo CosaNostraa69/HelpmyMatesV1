@@ -1,21 +1,21 @@
+// Dans Routes.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import SignupPage from './pages/SignupPage';
-import LoginPage from './pages/LoginPage';
-// Importez d'autres composants et pages
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/homePage';
+import SignupPage from './pages/signupPage';
+import LoginPage from './pages/loginPage';
 
-function Routes() {
+function AppRoutes() {
     return (
         <Router>
-            <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/signup" component={SignupPage} />
-                <Route path="/login" component={LoginPage} />
-                {/* Définissez d'autres routes ici */}
-            </Switch>
+            <Routes>
+                <Route exact path="/" element={<HomePage />} />
+                <Route path="/signup" element={<SignupPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                {/* Autres routes */}
+            </Routes>
         </Router>
     );
 }
 
-export default Routes;
+export default AppRoutes;

@@ -1,10 +1,9 @@
 import React from 'react';
-import SignupForm from '../components/auth/SignupForm';
+import SignupForm from '../components/auth/signupForm';
 
 function SignupPage() {
     return (
         <div>
-            <h2>Inscription</h2>
             <SignupForm />
         </div>
     );
