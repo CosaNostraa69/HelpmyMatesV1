@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../styles/header.css';
+import Logo from "../../images/logo.png";
 
 function Header() {
     return (
         <header className="header">
-            <h1>Help My Mates</h1>
-            <p>Communauté de Jeux Vidéo</p>
+            <img src={Logo} alt="Help My Mates's Logo" className="header-logo" />
         </header>
     );
 }
