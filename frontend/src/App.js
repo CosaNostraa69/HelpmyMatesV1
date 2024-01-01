@@ -3,7 +3,6 @@ import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Header from "./components/common/Header";
-import NavigationBar from "./components/common/navigationBar";
 
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
     <div className="App">
       
         <Header /> 
-        <NavigationBar />
     </div>
   );
 }

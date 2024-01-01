@@ -1,13 +1,19 @@
 .header {
-    text-align: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
 }
 
-.header-logo {
-    width: 25%; /* Taille ajustée du logo */
-    height: auto;
-    border-radius: 50%;
+.header-logo img {
+    height: 50px;  
+    width: 50px;
 }
-
-@media screen and (max-width: 600px) {
+.header-buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
 }
