@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css"
 import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import Header from "./components/common/Header";
+import NavigationBar from "./components/common/navigationBar";
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-         <img src={logo} className="App-logo" alt="logo" />
-          
-       
-      </header>
+      
+        <Header /> 
+        <NavigationBar />
     </div>
   );
 }
