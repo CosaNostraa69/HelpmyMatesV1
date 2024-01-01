@@ -1,35 +1,32 @@
 const pool = require('../config/dbConfig');
+const bcrypt = require('bcrypt');
 
 class UserModel {
-    async createUser(username, email, passwordHash) {
-        // Logique pour créer un utilisateur
+    async createUser(username, email, password, profilePicture, bio, gamePreferences) {
+        const hashedPassword = await bcrypt.hash(password, 10);
         try {
             const query = {
-                text: `INSERT INTO "user" (username, email, password) VALUES ($1, $2, $3) RETURNING *`,
-                values: [username, email, passwordHash],
+                text: `INSERT INTO users (username, email, password_hash, profile_picture, bio, game_preferences) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+                values: [username, email, hashedPassword, profilePicture, bio, gamePreferences],
             };
             const result = await pool.query(query);
             return result.rows[0];
-        }
-        catch (error) {
-            console.log(error);
+        } catch (error) {
+            console.error('Error creating user:', error);
             throw error;
         }
-        
     }
 
     async getUserById(userId) {
-        // Logique pour récupérer un utilisateur par son ID
         try {
             const query = {
-                text: `SELECT * FROM "user" WHERE id = $1`,
+                text: `SELECT * FROM users WHERE user_id = $1`,
                 values: [userId],
             };
             const result = await pool.query(query);
             return result.rows[0];
-        }
-        catch (error) {
-            console.log(error);
+        } catch (error) {
+            console.error('Error getting user by ID:', error);
             throw error;
         }
     }
@@ -37,32 +34,34 @@ class UserModel {
     async getUserByEmail(email) {
         try {
             const query = {
-                text: `SELECT * FROM "user" WHERE email = $1`,
+                text: `SELECT * FROM users WHERE email = $1`,
                 values: [email],
             };
             const result = await pool.query(query);
             return result.rows[0];
-        }
-        catch (error) {
-            console.log(error);
+        } catch (error) {
+            console.error('Error getting user by email:', error);
             throw error;
         }
     }
 
-    async updateUserById(userId, username, email, passwordHash) {
-        // Logique pour mettre à jour un utilisateur par son ID
+    async updateUserById(userId, username, email, password, profilePicture, bio, gamePreferences) {
+        const hashedPassword = await bcrypt.hash(password, 10);
         try {
             const query = {
-                text: `UPDATE "user" SET username = $1, email = $2, password = $3 WHERE id = $4 RETURNING *`,
-                values: [username, email, passwordHash, userId],
+                text: `UPDATE users SET username = $1, email = $2, password_hash = $3, profile_picture = $4, bio = $5, game_preferences = $6 WHERE user_id = $7 RETURNING *`,
+                values: [username, email, hashedPassword, profilePicture, bio, gamePreferences, userId],
             };
             const result = await pool.query(query);
             return result.rows[0];
-        }
-        catch (error) {
-            console.log(error);
+        } catch (error) {
+            console.error('Error updating user:', error);
             throw error;
         }
+    }
+
+    async verifyPassword(userPassword, hashedPassword) {
+        return bcrypt.compare(userPassword, hashedPassword);
     }
 
 }

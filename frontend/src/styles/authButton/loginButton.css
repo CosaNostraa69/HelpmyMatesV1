@@ -1,0 +1,16 @@
+.loginButton{
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    font-weight: 400;
+}
+.loginButton:hover{
+    color: rgb(255, 255, 255);
+    background-color: aqua;
+    
+}
