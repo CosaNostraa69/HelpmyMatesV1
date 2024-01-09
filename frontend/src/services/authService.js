@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/'; // Remplacez par l'URL de votre backend
+const API_URL = 'http://localhost:3001/api/'; // Remplacez par l'URL de votre backend
 
 const register = (username, email, password) => {
     return axios.post(API_URL + 'signup', {
