@@ -1,18 +1,17 @@
 // Dans App.js
-import "./styles/App.css";
-import 'primereact/resources/themes/lara-light-cyan/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import Header from "./components/common/Header";
-import AppRoutes from "./Routes"; // Importez avec le nouveau nom
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
+import Header from './components/common/Header';
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-            <AppRoutes /> 
-        </div>
-    );
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
