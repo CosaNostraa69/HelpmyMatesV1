@@ -53,7 +53,7 @@ function NavigationBar() {
               <path d="M14 12h6v8h-6z" />
               <path d="M14 4h6v4h-6z" />
             </svg>
-                            Home
+                             <span className={`hide ${isCollapsed ? '' : 'show'}`}>Home</span>
                         </Link>
                     </li>
                     <li>
@@ -67,7 +67,7 @@ function NavigationBar() {
               <path d="M15 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
               <path d="M4 20l14 0" />
             </svg>
-                            Games
+            <span className={`hide ${isCollapsed ? '' : 'show'}`}>Games</span>
                         </Link>
                     </li>
                     <li>
@@ -79,7 +79,7 @@ function NavigationBar() {
               <path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-6.8a2 2 0 0 1 -2 -2v-7a.9 .9 0 0 0 -1 -.8" />
               <path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a1 1 0 0 1 -1 -1v-4.5" />
             </svg>
-                            Forums
+            <span className={`hide ${isCollapsed ? '' : 'show'}`}>Forums</span>
                         </Link>
                     </li>
                     <li>
@@ -94,7 +94,7 @@ function NavigationBar() {
               <path d="M12 17v-1" />
               <path d="M15 17v-3" />
             </svg>
-                            About
+            <span className={`hide ${isCollapsed ? '' : 'show'}`}>About</span>
                         </Link>
                     </li>
                     {/* Ajoutez d'autres liens ici selon vos besoins */}
