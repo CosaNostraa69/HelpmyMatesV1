@@ -21,16 +21,14 @@ function NavigationBar() {
                     </Link>
                    
                 </div>
-                <button class="expand-btn"
-                
-        onClick={toggleSidebar}
-                type="button">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="exp-btn" role="img">
-          <title id="exp-btn">Expand/Collapse Menu</title>
-          <path d="M6.00979 2.72L10.3565 7.06667C10.8698 7.58 10.8698 8.42 10.3565 8.93333L6.00979 13.28"
-            stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </button>
+<button className="expand-btn" onClick={toggleSidebar} type="button">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="exp-btn" role="img">
+        <title id="exp-btn">Expand/Collapse Menu</title>
+        <path d="M6.00979 2.72L10.3565 7.06667C10.8698 7.58 10.8698 8.42 10.3565 8.93333L6.00979 13.28"
+              strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+</button>
+
             </div>
             <div class="search__wrapper">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="search-icon" role="img">
