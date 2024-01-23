@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/navigationBar.css';
 import Logo from "../../images/logo.png"; 
 import { Link } from 'react-router-dom';
+import ProfileImage from '../../images/napoli.svg'
 
 function NavigationBar() {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -103,7 +104,7 @@ function NavigationBar() {
             <div className="sidebar__profile">
                 <div className="avatar__wrapper">
                     {/* Image de profil */}
-                    <img src="chemin_vers_image_profil" alt="Profile" className="avatar" />
+                    <img src={ProfileImage} alt="Profile" className="avatar" />
                     <div className="online__status"></div>
                 </div>
                 <div className="avatar__name">
