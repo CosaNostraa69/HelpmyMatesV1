@@ -7,9 +7,6 @@ function Header() {
     return (
         <header className="header">
             <NavigationBar />
-            <div className="header-buttons">
-            
-            </div>
         </header>
     );
 }
