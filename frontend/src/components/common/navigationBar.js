@@ -43,56 +43,48 @@ function NavigationBar() {
                 <ul>
                     <li>
                         <Link to="/" className="tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-layout-dashboard" width="24"
-              height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-              strokeLinejoin="round" aria-hidden="true">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4h6v8h-6z" />
-              <path d="M4 16h6v4h-6z" />
-              <path d="M14 12h6v8h-6z" />
-              <path d="M14 4h6v4h-6z" />
-            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-home">
+  <path d="M0 0h24v24H0z" stroke="none"></path>
+  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+  <path d="M9 22V12h6v10"></path>
+</svg>
+
                              <span className={`hide ${isCollapsed ? '' : 'show'}`}>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/games" className="tooltip__content ">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chart-bar" width="24"
-              height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-              strokeLinejoin="round" aria-hidden="true">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-              <path d="M9 8m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-              <path d="M15 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-              <path d="M4 20l14 0" />
-            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-controller" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="2" y="6" width="20" height="12" rx="2" />
+  <path d="M6 12h4m-2 -2v4" />
+  <line x1="15" y1="11" x2="15" y2="11.01" />
+  <line x1="18" y1="13" x2="18" y2="13.01" />
+</svg>
+
             <span className={`hide ${isCollapsed ? '' : 'show'}`}>Games</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/forums" className="tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chart-pie" width="24"
-              height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-              strokeLinejoin="round" aria-hidden="true">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-6.8a2 2 0 0 1 -2 -2v-7a.9 .9 0 0 0 -1 -.8" />
-              <path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a1 1 0 0 1 -1 -1v-4.5" />
-            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 11.674a8 8 0 1 0 -10.628 9.33l.628 -2.24" />
+  <path d="M17 7v4h4" />
+</svg>
+
             <span className={`hide ${isCollapsed ? '' : 'show'}`}>Forums</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/about" className="tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-report-analytics" width="24"
-              height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-              strokeLinejoin="round" aria-hidden="true">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-              <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
-              <path d="M9 17v-5" />
-              <path d="M12 17v-1" />
-              <path d="M15 17v-3" />
-            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="12" r="9" />
+  <line x1="12" y1="8" x2="12.01" y2="8" />
+  <polyline points="11 12 12 12 12 16 13 16" />
+</svg>
+
             <span className={`hide ${isCollapsed ? '' : 'show'}`}>About</span>
                         </Link>
                     </li>
