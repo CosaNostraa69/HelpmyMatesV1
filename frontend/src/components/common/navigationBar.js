@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/navigationBar.css';
-import Logo from "../../images/logo.png"; 
 import { Link } from 'react-router-dom';
+import Logo from "../../images/logo.png"; 
 import ProfileImage from '../../images/napoli.svg';
 import { useAuth0 } from '@auth0/auth0-react'; // Importez useAuth0
 
