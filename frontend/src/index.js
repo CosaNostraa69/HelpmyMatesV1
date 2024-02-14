@@ -7,6 +7,9 @@ import './styles/index.css';
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+console.log('Domain:', process.env.REACT_APP_AUTH0_DOMAIN);
+console.log('Client ID:', process.env.REACT_APP_AUTH0_CLIENT_ID);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
