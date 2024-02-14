@@ -1,9 +1,11 @@
+// Header.js
 import React from 'react';
-import '../../styles/header.css';
-import NavigationBar from './navigationBar'; 
-
+import "../../components/common/navigationBar"
+import NavigationBar from '../../components/common/navigationBar';
+import "../../styles/header.css"
 
 function Header() {
+
     return (
         <header className="header">
             <NavigationBar />

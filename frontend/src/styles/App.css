@@ -13,16 +13,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-#tsparticles {
-  width: 100%;
-  height: 100vh; /* ou une autre hauteur selon vos besoins */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#tsparticles {
-  z-index: -1; /* ou un autre indice approprié */
-}
 
 
 
